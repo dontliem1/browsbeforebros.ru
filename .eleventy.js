@@ -17,6 +17,9 @@ module.exports = function (eleventyConfig) {
     );
   });
 
+  // get current year
+  eleventyConfig.addShortcode("currentYear", () => `${new Date().getFullYear()}`);
+
   // Syntax Highlighting for Code blocks
   eleventyConfig.addPlugin(syntaxHighlight);
 
@@ -37,6 +40,9 @@ module.exports = function (eleventyConfig) {
     "./node_modules/prismjs/themes/prism-tomorrow.css":
       "./static/css/prism-tomorrow.css",
   });
+
+  // Copy js folder to /_site
+  eleventyConfig.addPassthroughCopy("./src/static/js");
 
   // Copy Image Folder to /_site
   eleventyConfig.addPassthroughCopy("./src/static/img");

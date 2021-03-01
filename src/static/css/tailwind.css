@@ -4,12 +4,27 @@
 
 /*Your Custom CSS Goes here*/
 
-h1 {
-  @apply text-4xl tracking-tighter mb-3 text-center lg:text-7xl;
+body {
+  @apply font-light;
 }
 
 h3 {
   @apply text-2xl font-bold mb-3;
+}
+
+.bg-sert {
+  max-width: 6.7em;
+}
+.bg-sert::after {
+  content: url("../../static/img/sert_web.svg");
+  width: 1.7em;
+  height: auto;
+  position: absolute;
+  right: 0;
+  bottom: -.25em;
+  transform: rotate(11.25deg);
+  background-color: #f8f8f8;
+  z-index: -1;
 }
 
 /* Syntax Highlighting*/

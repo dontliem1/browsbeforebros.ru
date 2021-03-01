@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge"/>
@@ -17,13 +17,15 @@
     {% endif %}
   </head>
   <body>
-    {% include "./partials/navbar.html" %}
+    {% include "./partials/navbar.njk" %}
 
     {{ content | safe }}
 
-    {% include "./partials/footer.html" %}
+    {% include "./partials/footer.njk" %}
 
     <script src="/static/js/alpine.js"></script>
+    <script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=basic&skin=light&lazy=true"></script>
+    <script src="/static/js/2gis.js"></script>
 
     {% if path == "home" %}
       <!-- Netlify Identity Widget -->

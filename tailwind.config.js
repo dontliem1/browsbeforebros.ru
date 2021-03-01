@@ -1,3 +1,4 @@
+const colors = require('tailwindcss/colors');
 module.exports = {
   purge: {
     mode: "all",
@@ -11,9 +12,11 @@ module.exports = {
       center: true,
     },
     extend: {
-      colors: {},
-    },
+      colors: {
+        rose: colors.rose
+      }
+    }
   },
   variants: {},
-  plugins: [require("@tailwindcss/typography")],
+  plugins: [require("@tailwindcss/typography"), require("tailwindcss")],
 };
