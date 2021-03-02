@@ -7,7 +7,19 @@ description: "Цены на архитектуру и ламинирование
 <main class="container px-6 mx-auto">
   <h1 class="text-4xl tracking-tighter mb-2 lg:text-center lg:text-7xl font-medium">Цены на <b class="bg-clip-text text-transparent bg-gradient-to-br from-rose-300 to-rose-500 pr-0.5 -ml-0.5">услуги</b></h1>
 
-  <ul>
-
+  <ul class="max-w-lg mx-auto mt-10">
+    {% for category in price.categories %}
+      <h2 class="text-xl ml-4 mb-2 font-medium mt-5">{{ category.title }}</h2>
+      <ul>
+        {% for service in category.services %}
+          <li class="flex flex-wrap py-2 pr-8 pl-4 items-baseline relative bg-gray-50 categories-item">
+            <h3 class="mr-4 flex-grow">{{ service.title }}</h3>
+            <span class="flex-grow-2">{{ service.duration }}</span>
+            <span>{{ service.price }}</span>
+            <small class="block">{{ service.desc }}</small>
+          </li>
+        {% endfor %}
+      </ul>
+    {% endfor %}
   </ul>
 </main>

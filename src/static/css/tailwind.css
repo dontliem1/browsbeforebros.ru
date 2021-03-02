@@ -19,6 +19,24 @@
   z-index: -1;
 }
 
+.categories-item:first-child {
+  border-top-left-radius: .5em;
+  border-top-right-radius: .5em;
+}
+.categories-item:last-child {
+  border-bottom-left-radius: .5em;
+  border-bottom-right-radius: .5em;
+}
+.categories-item:not(:last-child)::before {
+  content: '';
+  position: absolute;
+  left: 1em;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 1px solid #d1d0d5;
+}
+
 .copied::after {
   content: 'Скопировано';
   position: absolute;
