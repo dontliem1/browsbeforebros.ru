@@ -1,14 +1,39 @@
----
 links:
   - title: Netlify CMS
-    url: "https://www.netlifycms.org/"
+    url: https://www.netlifycms.org/
     desc: Open source content management for your Git workflow
   - title: Eleventy
-    url: "https://www.11ty.dev/"
+    url: https://www.11ty.dev/
     desc: Eleventy is a simpler static site generator.
   - title: Alpine.js
-    url: "https://github.com/alpinejs/alpine"
+    url: https://github.com/alpinejs/alpine
     desc: A minimal framework for composing JavaScript behavior in your markup.
   - title: Tailwind CSS
-    url: "https://tailwindcss.com/"
+    url: https://tailwindcss.com/
     desc: A utility-first CSS framework for rapidly building custom designs.
+categories:
+  - title: Брови
+    services:
+      - title: Архитектура бровей
+        desc: моделирование + окрашивание краской/хной + коррекция
+        price: 1100 ₽
+      - title: Архитектура + долговременная укладка / ламинирование бровей
+        price: 1700 ₽
+      - title: Долговременная укладка / ламинирование бровей
+        price: 1000 ₽
+      - title: Долговременная укладка + коррекция / окрашивание
+        price: 1500 ₽
+  - title: Ресницы
+    services:
+      - title: Окрашивание ресниц
+        price: 400 ₽
+      - title: Снятие наращённых ресниц
+        price: 300 ₽
+  - title: Дополнительно
+    services:
+      - title: Эпиляция воском на лице
+        price: от 200 ₽
+      - title: Масло усьмы
+        price: 300 ₽
+      - title: Подарочные сертификаты на любую сумму
+        price: "0"
