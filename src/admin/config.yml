@@ -11,58 +11,58 @@ public_folder: "/static/img"
 # Please run "npx netlify-cms-proxy-server" for local backend
 local_backend: true
 # publish_mode: editorial_workflow
+language: ru
 collections:
-  - label: "Blog"
+  - label: "Блог"
     name: "blog"
     folder: "src/posts"
     create: true
     editor:
       preview: false
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Description", name: "description", widget: "string" }
-      - { label: "Author", name: "author", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Заголовок", name: "title", widget: "string" }
+      - { label: "Описание", name: "description", widget: "string" }
+      - { label: "Время публикации", name: "date", widget: "datetime" }
+      - { label: "Содержимое", name: "body", widget: "markdown" }
       - widget: select
-        label: "tags"
+        label: "Теги"
         name: "tags"
         multiple: true
         create: true
-        options: ["Tags", "created", "from", "config.yml"]
-  - label: "Settings"
+        options: ["Брови", "Ресницы", "Обучение", "Работы"]
+  - label: "Натройка"
     name: "settings"
     editor:
       preview: false
     files:
-      - label: "Navigation"
+      - label: "Навигация"
         name: "items"
         file: "src/_data/navigation.yaml"
         fields:
-          - label: Nav Items
+          - label: "Ссылки"
             name: items
             widget: list
             allow_add: false
             collapsed: false
             fields:
-              - { label: Title, name: text, widget: string }
+              - { label: "Подпись", name: text, widget: string }
               - { label: URL, name: url, widget: string }
-      - label: "Quick Links"
-        name: "links"
-        file: "src/_data/quicklinks.yaml"
+      - label: "Прайс"
+        name: "price"
+        file: "src/_data/price.yaml"
         fields:
-          - label: Nav Items
-            name: links
+          - label: "Категории услуг"
+            name: categories
             widget: list
             collapsed: false
             fields:
-              - { label: Title, name: title, widget: string }
-              - { label: URL, name: url, widget: string }
-              - { label: Description, name: desc, widget: string }
-      - label: "Meta Settings"
-        name: "settings"
-        file: "src/_data/settings.yaml"
-        fields:
-          - { label: Name, name: name, widget: string }
-          - { label: Author, name: author, widget: string }
-          - { label: URL, name: url, widget: string }
+              - { label: "Название", name: title, widget: string }
+              - label: "Услугиг"
+                name: services
+                widget: list
+                collapsed: false
+                fields:
+                  - { label: "Название", name: title, widget: string }
+                  - { label: "Описание", name: desc, widget: string, required: false }
+                  - { label: "Цена", name: price, widget: string }
+                  - { label: "Продолжительность", name: duration, widget: string, required: false }

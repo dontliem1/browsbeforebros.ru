@@ -15,8 +15,8 @@ document.getElementById('toggleMap').onclick = function() {
             maxZoom: 16
         });
         let bbbIcon = DG.icon({
-            iconUrl: 'marker.png',
-            iconRetinaUrl: 'marker@2x.png',
+            iconUrl: '/static/img/marker.png',
+            iconRetinaUrl: '/static/img/marker@2x.png',
             iconSize: [36, 48],
             iconAnchor: [18, 48]
         });

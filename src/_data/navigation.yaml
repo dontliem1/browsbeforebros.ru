@@ -1,0 +1,6 @@
+---
+items:
+  - text: "Обучение"
+    url: "/courses"
+  - text: "Услуги"
+    url: "/services"
