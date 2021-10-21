@@ -4,7 +4,7 @@ document.getElementById('toggleMap').onclick = function() {
         document.getElementById('toggleMap').disabled = true;
         document.getElementById('map').style.minHeight = '25em';
         let map = DG.map('map', {
-            center: [57.140568, 65.570241],
+            center: [57.149046, 65.548909],
             zoom: 14,
             fullscreenControl: false,
             maxBounds: [
@@ -20,14 +20,14 @@ document.getElementById('toggleMap').onclick = function() {
             iconSize: [36, 48],
             iconAnchor: [18, 48]
         });
-        let bbb = DG.marker([57.140568, 65.570241], {
+        let bbb = DG.marker([57.149046, 65.548909], {
             icon: bbbIcon,
             title: 'Перейти на карту 2GIS',
             alt: 'Маркер со ссылкой на карту 2GIS'
         }).addTo(map);
         bbb.on('click', function () {
             if (window.confirm('Перейти на карту 2GIS?')) {
-                window.open('https://go.2gis.com/02gws', '_blank');
+                window.open('https://go.2gis.com/i3ji9', '_blank');
             }
         });
     });
