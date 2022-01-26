@@ -23,14 +23,12 @@
             {% if navigation.items %}
 
                 <ul class="pt-6 sm:pt-0 list-reset sm:flex justify-end flex-1 items-center">
-                    {% if path == home %}
                     <li class="nav__item mr-3">
-                        <a @click="isOpen = false" class="text-ml inline-block text-gray-500 no-underline hover:text-rose-300 py-2 px-4" href="/">Главная</a>
+                        <a @click="isOpen = false" class="text-ml inline-block text-gray-500 no-underline hover:text-rose-300 py-2 px-4{% if path == home %} text-rose-300{% endif %}" {% if path == home %}aria-current="page"{% else %}href="/"{% endif %}>Главная</a>
                     </li>
-                    {% endif %}
                     {% for item in navigation.items %}
                         <li class="nav__item mr-3">
-                            <a @click="isOpen = false" class="text-ml inline-block text-gray-500 no-underline hover:text-rose-300 py-2 px-4" {% if item.url in page.url %}aria-current="page"{% else %}href="{{ item.url }}"{% endif %}>{{ item.text }}</a>
+                            <a @click="isOpen = false" class="text-ml inline-block text-gray-500 no-underline hover:text-rose-300 py-2 px-4{% if item.url in page.url %} text-rose-300{% else %}" {% if item.url in page.url %}aria-current="page"{% else %}href="{{ item.url }}"{% endif %}>{{ item.text }}</a>
                         </li>
                     {% endfor %}
                 </ul>
