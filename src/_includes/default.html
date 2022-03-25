@@ -12,9 +12,6 @@
     {% endif %}
     {% block head %}{% endblock %}
     <link rel="stylesheet" type="text/css" href="/static/css/style.css"/>
-    {% if prism == true %}
-      <link rel="stylesheet" type="text/css" href="/static/css/prism-tomorrow.css">
-    {% endif %}
   </head>
   <body class="font-extralight min-h-screen flex flex-col">
     {% include "./partials/navbar.njk" %}
@@ -30,7 +27,7 @@
     {% if path == "home" %}
       <!-- Netlify Identity Widget -->
       <!-- Needed only if you are using Netlify Identity feature -->
-      <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+      <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     {% endif %}
 
   </body>

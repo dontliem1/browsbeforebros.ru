@@ -1,5 +1,4 @@
 const yaml = require("js-yaml");
-const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const htmlmin = require("html-minifier");
 
 module.exports = function (eleventyConfig) {
@@ -12,13 +11,10 @@ module.exports = function (eleventyConfig) {
   // get current year
   eleventyConfig.addShortcode("currentYear", () => `${new Date().getFullYear()}`);
 
-  // Syntax Highlighting for Code blocks
-  eleventyConfig.addPlugin(syntaxHighlight);
-
   // To Support .yaml Extension in _data
   // You may remove this if you can use JSON
   eleventyConfig.addDataExtension("yaml", (contents) =>
-    yaml.safeLoad(contents)
+    yaml.load(contents)
   );
 
   // Add Tailwind Output CSS as Watch Target
@@ -29,8 +25,6 @@ module.exports = function (eleventyConfig) {
     "./_tmp/static/css/style.css": "./static/css/style.css",
     "./src/admin/config.yml": "./admin/config.yml",
     "./node_modules/alpinejs/dist/alpine.js": "./static/js/alpine.js",
-    "./node_modules/prismjs/themes/prism-tomorrow.css":
-      "./static/css/prism-tomorrow.css",
   });
 
   // Copy js folder to /_site

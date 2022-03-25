@@ -1,18 +1,13 @@
 const colors = require('tailwindcss/colors');
 module.exports = {
-  purge: {
-    mode: "all",
-    content: ["./**/*.html"],
-    options: {
-      whitelist: [],
-    },
-  },
+  content: ["./**/*.html"],
   theme: {
     container: {
       center: true,
     },
     extend: {
       colors: {
+        current: 'currentColor',
         rose: colors.rose
       }
     }

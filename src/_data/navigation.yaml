@@ -1,6 +1,7 @@
----
 items:
+  - text: "Главная"
+    url: "/"
   - text: "Обучение"
-    url: "/courses"
+    url: "/courses/"
   - text: "Услуги"
-    url: "/services"
+    url: "/services/"
